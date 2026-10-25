@@ -39,6 +39,7 @@ This integration provides the following binary sensors:
 
 | Name                  | Description                         |
 | --------------------- | ----------------------------------- |
+| AC Power              | Whether the device is on AC power   |
 | Battery Is Charging   | Whether the battery is charging     |
 | Camera In Use         | Whether the camera/webcam is in use |
 | Pending Reboot        | Whether a reboot is pending         |
@@ -51,6 +52,7 @@ This integration provides the following sensors:
 | Name                 | Description                                         |
 | -------------------- | --------------------------------------------------- |
 | Battery              | Battery level of the device                         |
+| Battery State        | Charging state of the battery                       |
 | Boot Time            | Time the device was turned on                       |
 | CPU Speed            | The current CPU speed                               |
 | Displays Connected   | Number of displays connected                        |
@@ -75,6 +77,8 @@ These sensors are also available, but are not enabled by default:
 
 | Name                   | Description                        |
 | ---------------------- | ---------------------------------- |
+| Battery Power          | Battery power draw in watts        |
+| Battery Voltage        | Battery voltage in volts           |
 | CPU Temperature        | The current temperature of the CPU |
 | CPU Voltage            | The current voltage of the CPU     |
 | GPU Core Clock Speed   | GPU core clock speed in MHz        |
@@ -84,6 +88,8 @@ These sensors are also available, but are not enabled by default:
 | GPU Memory Used %      | GPU memory used percentage         |
 | GPU Power Usage        | GPU power usage                    |
 | GPU Temperature        | The current temperature of the GPU |
+
+Each battery System Bridge finds, including ones in connected devices such as a wireless mouse or headset, also gets a level and a state sensor named after its model, such as `PRO X SUPERLIGHT 2c battery`. They're enabled for connected devices, and disabled by default for the device's own batteries, which the battery sensors above already cover. Sensors for a battery that appears later, such as a headset being switched on, are added when it first shows up. The AC Power binary sensor is only added on devices that report it, so desktops don't get one.
 
 ## Media player
 
