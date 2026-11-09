@@ -74,6 +74,9 @@ When Home Assistant discovers your device, or asks you to re-authenticate it, it
 
 ### Selects
 
+- **App**
+  - **Description**: Choose which app to display on the LaMetric device. The options are updated automatically as apps are installed or removed on the device.
+  - **Entity category**: Configuration
 - **Brightness mode**
   - **Description**: Choose whether the brightness is set manually or automatically based on ambient light.
   - **Entity category**: Configuration
@@ -83,6 +86,8 @@ When Home Assistant discovers your device, or asks you to re-authenticate it, it
 
 ### Sensors
 
+- **Current app**
+  - **Description**: The name of the app currently displayed on the LaMetric device.
 - **Wi-Fi signal**
   - **Description**: The current Wi-Fi signal strength in percent.
   - **Entity category**: Diagnostic
